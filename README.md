@@ -60,9 +60,24 @@ Los filtros por duración se actualizan solos con `data-duration`.
 
 ## El formulario
 
-Valida en el navegador y guarda el alta en `localStorage` (`tertulia.leads`). **No envía nada a ningún sitio.**
-Antes de publicar, conéctalo a lo que uses: Formspree, Mailchimp, Brevo, Google Forms o un endpoint propio.
-Se toca en `js/main.js`, bloque `form`, justo después de `const leads = …`.
+No hay backend. Valida, compone el mensaje con todos los datos y lo entrega por el canal que esté configurado
+en `CONTACT`, al principio de `js/main.js`:
+
+```js
+const CONTACT = {
+  whatsapp: "",   // "34612345678"  → abre WhatsApp con el mensaje escrito
+  email: "",      // "hola@..."     → abre el correo con el mensaje escrito
+  instagram: "soyunmix"
+};
+```
+
+- Con `whatsapp` relleno: se abre WhatsApp con el texto ya escrito y la persona solo pulsa enviar.
+- Con `email` relleno: igual, pero por correo.
+- Con los dos vacíos: aparece el mensaje listo, un botón para copiarlo y el acceso al DM de Instagram.
+
+En los tres casos se guarda una copia en `localStorage` (`tertulia.leads`) y la web **nunca dice «enviado»
+si no se ha enviado**. Para mandarlo además a un CRM (Mailchimp, Brevo, Formspree), el sitio natural es
+la función `buildMessage()` y el `fetch` justo después.
 
 ## Qué es de mentira (y hay que sustituir antes de publicar)
 

@@ -400,13 +400,22 @@ details p a{color:var(--ink);text-decoration:underline;text-underline-offset:3px
 .check a{text-decoration:underline;text-underline-offset:2px}
 .form__small{font-size:.68rem;color:rgba(22,33,27,.55);margin-top:12px;line-height:1.55;text-align:center}
 
-.form-done{text-align:center;padding:26px 4px}
+.form-done{text-align:center;padding:22px 2px}
 .form-done__mark{
   width:52px;height:52px;border-radius:50%;background:var(--oliva);color:var(--paper);
   display:grid;place-items:center;margin:0 auto 20px;font-size:1.45rem;font-weight:600;line-height:1;
 }
 .form-done h3{font-size:1.5rem;margin-bottom:10px}
-.form-done p{font-size:.9rem;color:var(--muted);margin-bottom:20px}
+.form-done p{font-size:.9rem;color:var(--muted);margin-bottom:16px}
+.form-done__msg{
+  text-align:left;white-space:pre-wrap;word-break:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.76rem;line-height:1.65;color:var(--ink);
+  background:var(--paper-2);border:1px solid var(--line);border-radius:3px;
+  padding:14px 16px;margin:0 0 16px;max-height:230px;overflow:auto;
+}
+.form-done__actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px}
+.form-done__actions .btn{padding:10px 16px;font-size:.78rem}
 
 /* ---------- footer ---------- */
 .footer{background:var(--ink);color:var(--paper);border-top:1px solid rgba(247,241,230,.1);padding-top:clamp(48px,6vw,72px)}

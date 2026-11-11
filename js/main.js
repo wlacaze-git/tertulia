@@ -171,6 +171,19 @@ const TRIPS = {
 };
 
 /* ----------------------------------------------------------
+   CONTACTO · lo único que hay que rellenar
+   Pon el WhatsApp (prefijo de país, sin +) o el correo y el
+   formulario abrirá la app con el mensaje ya escrito.
+   Si los dos están vacíos, muestra el mensaje listo para copiar
+   y el botón de DM de Instagram. Nunca se pierde una solicitud.
+   ---------------------------------------------------------- */
+const CONTACT = {
+  whatsapp: "",              // ej. "34612345678"
+  email: "",                 // ej. "hola@tertulia.club"
+  instagram: "soyunmix"
+};
+
+/* ----------------------------------------------------------
    utilidades
    ---------------------------------------------------------- */
 const $  = (sel, ctx = document) => ctx.querySelector(sel);
@@ -408,6 +421,21 @@ const store = {
     return { ...data, privacy, date: new Date().toISOString() };
   }
 
+  function buildMessage(d) {
+    const lines = [
+      "Hola, quiero ir al café de Tertulia.",
+      "",
+      `Nombre: ${d.name}`,
+      `Correo: ${d.email}`,
+      `Ciudad: ${d.city}`
+    ];
+    if (d.instagram) lines.push(`Instagram / WhatsApp: ${d.instagram}`);
+    if (d.trip) lines.push(`Viaje: ${d.trip}`);
+    if (d.note) lines.push("", `Nota: ${d.note}`);
+    lines.push("", "— enviado desde la web de Tertulia");
+    return lines.join("\n");
+  }
+
   form.addEventListener("submit", e => {
     e.preventDefault();
     const data = validate();
@@ -417,15 +445,62 @@ const store = {
     leads.push(data);
     store.set("tertulia.leads", leads);
 
-    const text = data.trip && data.trip !== "Aún no lo sé, cuéntame en el café"
-      ? `Te escribo yo misma antes del 17 de noviembre con la dirección y la hora. Me has dicho que te interesa <strong>${data.trip}</strong>, así que te llevo el itinerario impreso. Si al final no puedes venir, avísame y le paso el sitio a otra persona.`
-      : "Te escribo yo misma antes del 17 de noviembre con la dirección y la hora. Si al final no puedes venir, avísame y le paso el sitio a otra persona.";
+    const text = buildMessage(data);
+    const waUrl = CONTACT.whatsapp
+      ? `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(text)}`
+      : "";
+    const mailUrl = CONTACT.email
+      ? `mailto:${CONTACT.email}?subject=${encodeURIComponent("Quiero ir al café")}&body=${encodeURIComponent(text)}`
+      : "";
 
-    $("#formDoneText").innerHTML = text;
+    const titleEl = $("#formDoneTitle");
+    const textEl = $("#formDoneText");
+    const waLink = $("#waLink");
+    const mailLink = $("#mailLink");
+    const igLink = $("#igLink");
+
+    $("#formDoneMsg").textContent = text;
+
+    if (waUrl || mailUrl) {
+      const link = waUrl ? waLink : mailLink;
+      link.href = waUrl || mailUrl;
+      link.hidden = false;
+      igLink.hidden = true;
+      titleEl.textContent = "Te falta darle a enviar.";
+      textEl.textContent = waUrl
+        ? "Se ha abierto WhatsApp con el mensaje escrito. Dale a enviar y te apunto en cuanto lo lea."
+        : "Se ha abierto tu correo con el mensaje escrito. Dale a enviar y te apunto en cuanto lo lea.";
+      link.click();
+    } else {
+      titleEl.textContent = "Un paso más.";
+      textEl.textContent = "Copia el mensaje y mándamelo por Instagram. Es la vía más rápida y me llega directo.";
+    }
+
     form.hidden = true;
     done.hidden = false;
     done.scrollIntoView({ behavior: "smooth", block: "center" });
   });
+
+  // copiar el mensaje
+  const copyBtn = $("#copyMsg");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      const box = $("#formDoneMsg");
+      try {
+        await navigator.clipboard.writeText(box.textContent);
+      } catch (err) {
+        const range = document.createRange();
+        range.selectNodeContents(box);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        document.execCommand("copy");
+        sel.removeAllRanges();
+      }
+      copyBtn.textContent = "Copiado ✓";
+      setTimeout(() => { copyBtn.textContent = "Copiar el mensaje"; }, 2200);
+    });
+  }
 
   // limpiar error al escribir
   $$("input, select, textarea", form).forEach(input => {

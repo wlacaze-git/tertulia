@@ -569,8 +569,15 @@
 
       <div class="form-done" id="formDone" hidden>
         <p class="form-done__mark">✓</p>
-        <h3>Estás en la lista.</h3>
-        <p id="formDoneText">Te escribimos antes del 24 de noviembre con la dirección y el plan de la tarde.</p>
+        <h3 id="formDoneTitle">Un paso más.</h3>
+        <p id="formDoneText"></p>
+        <pre class="form-done__msg" id="formDoneMsg"></pre>
+        <div class="form-done__actions">
+          <button class="btn btn--primary btn--sm" type="button" id="copyMsg">Copiar el mensaje</button>
+          <a class="btn btn--ghost btn--sm" id="waLink" href="#" target="_blank" rel="noopener" hidden>Abrir WhatsApp</a>
+          <a class="btn btn--ghost btn--sm" id="mailLink" href="#" hidden>Abrir el correo</a>
+          <a class="btn btn--ghost btn--sm" id="igLink" href="https://ig.me/m/soyunmix" target="_blank" rel="noopener">Abrir Instagram</a>
+        </div>
         <button class="arrow-link" type="button" id="formReset">Apuntar a otra persona</button>
       </div>
     </div>

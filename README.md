@@ -1,5 +1,7 @@
 # TERTULIA · web del club
 
+**Publicada en:** https://wlacaze-git.github.io/tertulia/ · repo: https://github.com/wlacaze-git/tertulia
+
 Página de una sola vista para presentar el concepto y los próximos viajes.
 Sin frameworks, sin build, sin dependencias: se abre y funciona.
 

@@ -20,6 +20,27 @@ js/main.js          fichas de viaje, filtros, formulario, menú
 IDEAS.md            el documento de negocio: concepto, números, legal, plan
 ```
 
+## Paleta
+
+Sacada del feed de **@soyunmix**: el fondo de sus posts de texto es un hueso cálido (`#F6F5F1`), el óxido de la
+cerámica y la madera ronda `#996B59`, el verde de las plantas `#5D542E` y el rosa de las flores `#CBAB9C`.
+Todo está en `:root`, en `css/styles.css`:
+
+| Variable | Hex | Uso |
+|---|---|---|
+| `--paper` | `#F6F4EF` | fondo general |
+| `--paper-2` | `#EDE7DD` | secciones alternas |
+| `--ink` | `#26231A` | texto y botones oscuros |
+| `--forest` | `#2B281C` | bloques oscuros (manifiesto, café, pie) |
+| `--terra` | `#8E5A44` | acento principal, enlaces y CTA |
+| `--oliva` | `#6B6748` | etiquetas pequeñas |
+| `--gold` | `#B99B66` | acentos sobre fondo oscuro |
+| `--blush` | `#C9A28F` | toque rosa en las pastillas de café |
+
+Los contrastes están comprobados: texto pequeño ≥ 4,5:1 y titulares grandes ≥ 3:1 sobre su fondo.
+La firma manuscrita del final es la tipografía **Caveat**, imitando la firma de sus publicaciones.
+Muestra: [`paleta.png`](paleta.png).
+
 ## El flujo que cuenta la web
 
 1. El viaje ya está diseñado y publicado (fechas, itinerario, precio cerrado).

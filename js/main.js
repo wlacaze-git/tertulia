@@ -17,7 +17,7 @@ const TRIPS = {
     title: "Viena y los mercadillos de Adviento",
     lead: "Tres días de ciudad en diciembre: punsch, castañas asadas, Klimt y un palacio con mercado en el patio. El viaje piloto del club, con todo rodado.",
     img: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Burgtheater_and_Christmas_Market_%28375862051%29.jpg/1920px-Burgtheater_and_Christmas_Market_%28375862051%29.jpg",
-    meta: ["4–6 dic 2026", "10 plazas · quedan 3", "desde 690 €", "vuelos no incluidos", "Café: jueves 19 de noviembre"],
+    meta: ["4–6 dic 2026", "8 plazas · quedan 3", "desde 690 €", "vuelos no incluidos", "Café: jueves 19 de noviembre"],
     days: [
       { h: "Día 1 · viernes 4", items: [
         ["11:20", "Llegada a Viena. Traslado al hotel y café de bienvenida en un café de 1900."],
@@ -37,7 +37,7 @@ const TRIPS = {
       ]}
     ],
     inc: ["2 noches de hotel 4* céntrico con desayuno", "Traslados aeropuerto ↔ hotel", "Entradas a Schönbrunn y Belvedere", "Dos cenas de grupo", "Guía local el sábado", "Seguro de asistencia", "Coordinadora del club"],
-    exc: ["Vuelos (desde ~120 € desde Madrid)", "Comidas libres", "Concierto opcional", "Bebidas y extras"],
+    exc: ["Vuelos (desde ~120 € desde Málaga)", "Comidas libres", "Concierto opcional", "Bebidas y extras"],
     fine: "Precio por persona en habitación doble compartida. Individual con suplemento de 180 €. Si no llegamos a 8 personas, se cancela y se devuelve todo.",
     formOption: "Viena · diciembre 2026"
   },
@@ -47,10 +47,10 @@ const TRIPS = {
     title: "Ronda y los pueblos blancos",
     lead: "El formato corto del club: sales un sábado por la mañana y duermes en tu cama el domingo. Un desfiladero, una bodega y un pueblo metido dentro de la roca.",
     img: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/View_of_Puente_Nuevo_bridge_in_Ronda_Spain.jpg/1920px-View_of_Puente_Nuevo_bridge_in_Ronda_Spain.jpg",
-    meta: ["6–7 feb 2027", "12 plazas · quedan 9", "desde 320 €", "tren incluido", "Café: jueves 14 de enero"],
+    meta: ["6–7 feb 2027", "8 plazas · quedan 5", "desde 320 €", "transporte incluido", "Café: jueves 14 de enero"],
     days: [
       { h: "Día 1 · sábado 6", items: [
-        ["09:00", "AVE Madrid–Antequera y traslado a Ronda."],
+        ["09:00", "Salida en minibús desde Marbella. Café en el camino."],
         ["12:30", "Puente Nuevo, barrio de la Ciudad y mirador del Tajo."],
         ["15:00", "Comida en una bodega con vinos de la Serranía."],
         ["19:00", "Atardecer en el mirador y cena de tapas."]
@@ -58,10 +58,10 @@ const TRIPS = {
       { h: "Día 2 · domingo 7", items: [
         ["09:30", "Setenil de las Bodegas: el pueblo construido bajo la roca."],
         ["12:30", "Zahara de la Sierra y mirador del embalse."],
-        ["16:00", "Vuelta a Antequera y AVE a Madrid."]
+        ["16:00", "Vuelta a Marbella."]
       ]}
     ],
-    inc: ["AVE Madrid–Antequera ida y vuelta", "1 noche en hotel boutique con desayuno", "Minibús y traslados", "Comida en bodega y cena de tapas", "Seguro de asistencia", "Coordinadora del club"],
+    inc: ["Minibús Marbella–Ronda ida y vuelta", "1 noche en hotel boutique con desayuno", "Traslados y aparcamiento", "Comida en bodega y cena de tapas", "Seguro de asistencia", "Coordinadora del club"],
     exc: ["Desayuno del domingo (a propósito, para ir de bares)", "Bebidas fuera de las comidas", "Extras"],
     fine: "Precio por persona en habitación doble compartida. Individual con suplemento de 65 €. Es el viaje más barato del año a propósito: sirve para probar el club.",
     formOption: "Ronda · febrero 2027"
@@ -72,7 +72,7 @@ const TRIPS = {
     title: "Tánger y la ciudad azul",
     lead: "Té con vistas al Estrecho, tres horas de carretera por el Rif y Chefchaouen entera. El viaje que todo el mundo repite al año siguiente.",
     img: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Chefchaouen-blue-city-during-thesunset.jpg/1920px-Chefchaouen-blue-city-during-thesunset.jpg",
-    meta: ["11–14 mar 2027", "12 plazas · quedan 8", "desde 780 €", "vuelos no incluidos", "Café: jueves 18 de febrero"],
+    meta: ["11–14 mar 2027", "8 plazas · quedan 6", "desde 780 €", "vuelos no incluidos", "Café: jueves 18 de febrero"],
     days: [
       { h: "Día 1 · jueves 11", items: [
         ["10:00", "Vuelo a Tánger y check-in en la medina."],
@@ -107,7 +107,7 @@ const TRIPS = {
     title: "Cotswolds, piedra y chimenea",
     lead: "Cuatro días de pueblos color miel, pubs con chimenea y campos verdes. El viaje más lento del calendario: se camina, se come y se duerme bien.",
     img: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/River_and_cottages_Bibury_Cotswolds.jpg/1920px-River_and_cottages_Bibury_Cotswolds.jpg",
-    meta: ["22–25 abr 2027", "10 plazas", "desde 1.150 €", "vuelos no incluidos", "Café: jueves 25 de marzo"],
+    meta: ["22–25 abr 2027", "8 plazas", "desde 1.150 €", "vuelos no incluidos", "Café: jueves 25 de marzo"],
     days: [
       { h: "Día 1 · jueves 22", items: [
         ["10:00", "Vuelo a Bristol y minibús a Cirencester."],
@@ -140,7 +140,7 @@ const TRIPS = {
     title: "El Loira y la ruta de los castillos",
     lead: "Chambord, Chenonceau y Villandry con base en Amboise. Cuatro castillos, una cata, una barca por el Cher y ninguna prisa.",
     img: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Ch%C3%A2teau_de_Chambord_at_dawn.jpg/1920px-Ch%C3%A2teau_de_Chambord_at_dawn.jpg",
-    meta: ["13–16 may 2027", "12 plazas", "desde 1.040 €", "vuelos no incluidos", "Café: jueves 15 de abril"],
+    meta: ["13–16 may 2027", "8 plazas", "desde 1.040 €", "vuelos no incluidos", "Café: jueves 15 de abril"],
     days: [
       { h: "Día 1 · jueves 13", items: [
         ["11:00", "Vuelo a París y TGV a Tours."],
@@ -167,6 +167,33 @@ const TRIPS = {
     exc: ["Vuelos a París (desde ~130 €)", "Comidas libres", "Paseo en barca (12 €)"],
     fine: "Precio por persona en habitación doble compartida. Mayo es temporada alta en el Loira: las entradas se compran con antelación y no se reembolsan.",
     formOption: "Loira · mayo 2027"
+  },
+
+  marrakech: {
+    kicker: "Marruecos · 2 días",
+    title: "Marrakech en dos días",
+    lead: "Hora y cuarto de vuelo desde Málaga y otra cultura. Un riad con patio, el zoco, la plaza al atardecer y un hammam opcional. Es un aperitivo: se vuelve.",
+    img: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Jemaa_el-Fnaa_Marrakech_at_sunset.jpg/1920px-Jemaa_el-Fnaa_Marrakech_at_sunset.jpg",
+    meta: ["8–9 may 2027", "8 plazas · quedan 7", "desde 420 €", "vuelos no incluidos", "Café: jueves 22 de abril"],
+    days: [
+      { h: "Día 1 · sábado 8", items: [
+        ["07:00", "Vuelo Málaga–Marrakech (1 h 15) y traslado al riad."],
+        ["10:30", "Primer paseo por la medina y la plaza Jemaa el-Fna."],
+        ["14:00", "Comida en un patio escondido del zoco."],
+        ["17:00", "Jardín Majorelle o madrasa Ben Youssef."],
+        ["20:30", "Cena en una terraza con la plaza debajo."]
+      ]},
+      { h: "Día 2 · domingo 9", items: [
+        ["09:00", "Zoco de las especias y taller de té con una vendedora."],
+        ["11:30", "Hammam tradicional (opcional, 25 €)."],
+        ["14:00", "Última comida y traslado al aeropuerto."],
+        ["17:00", "Vuelo de vuelta a Málaga."]
+      ]}
+    ],
+    inc: ["1 noche en riad con desayuno", "Traslados aeropuerto ↔ medina", "Guía local medio día", "Cena en la terraza", "Seguro de asistencia", "Coordinadora del club"],
+    exc: ["Vuelos (desde ~70 € desde Málaga)", "Comidas libres", "Hammam (25 €)"],
+    fine: "Precio por persona en habitación doble compartida. Dos días son pocos para Marrakech y lo sabemos: es un aperitivo para volver con más tiempo.",
+    formOption: "Marrakech · mayo 2027"
   }
 };
 
